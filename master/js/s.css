@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+._show {
+  -webkit-animation: _show 0.6s infinite;
+          animation: _show 0.6s infinite;
+}
+
+@-webkit-keyframes _show {
+  0% {
+    -webkit-transform: rotate(84deg);
+            transform: rotate(84deg);
+  }
+  50% {
+    -webkit-transform: rotate(-84deg);
+            transform: rotate(-84deg);
+  }
+  100% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+}
+
+@keyframes _show {
+  0% {
+    -webkit-transform: rotate(84deg);
+            transform: rotate(84deg);
+  }
+  50% {
+    -webkit-transform: rotate(-84deg);
+            transform: rotate(-84deg);
+  }
+  100% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #3e48d1, #a746bb, #783ca8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .imgc {
+  width: 300px;
+  height: 250px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .imgc img {
+  width: 80px;
+  height: 80px;
+}
+
+body .img2 {
+  width: 300px;
+  height: 100px;
+  background-color: aliceblue;
+}
+
+body .img2 p {
+  margin-left: 100px;
+  padding-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+body .img2 button {
+  margin-left: 100px;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(45deg, #3e48d1, #a746bb, #783ca8);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body .img2 button:hover {
+  color: #a746bb;
+  background: white;
+}
+/*# sourceMappingURL=s.css.map */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master/js/s.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imgc">
+            <img id="dice" src="master/img/pngwing.com.png" alt="">
+            <img id="dice2" src="master/img/pngwing.com (2).png" alt="">
+        </div>
+
+        <div class="img2">
+            <p class="total">Your Roll is 4</p>
+            <button class="rool">Roll Dice </button>
+        </div>
+
+    </div>
+
+
+    <!-- ***********start script********** -->
+    <script>
+        let images =[
+            "master/img/pngwing.com.png",
+            "master/img/pngwing.com (1).png",
+        "master/img/pngwing.com (2).png",
+        "master/img/pngwing.com (3).png",
+        "master/img/pngwing.com (5).png",
+        "master/img/pngwing.com (4).png",
+    ]
+
+    const rool = document.querySelector('.rool')
+     const img = document.querySelectorAll('.imgc>img')
+    
+    function _change(){
+          const d1 = Math.floor(Math.random()*6)
+          const d2 = Math.floor(Math.random()*6)
+         
+        document.querySelector('#dice').setAttribute("src", images[d1])
+        document.querySelector('#dice2').setAttribute("src", images[d2])
+        let t= document.querySelector('.total')
+        t.innerHTML = ('your roll is '+ ((d1+1)+ (d2+1)))
+        console.log(t);
+    }
+
+
+            rool.addEventListener('click', function(){
+                for(i=0 ; i<img.length ; i++){
+            img[i].classList.add('_show')        
+        }
+
+        setTimeout(function(){
+            for(i=0 ; i<img.length ; i++){
+            img[i].classList.remove('_show')  
+        }
+
+    },1000)
+    _change()
+
+})
+
+    </script>
+</body>
+</html>
